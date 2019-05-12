@@ -1,0 +1,41 @@
+/* GLOBAL SETTINGS */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+img {
+    width: 100px;
+    height: auto;
+}
+
+.flex_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.component_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 1px solid black;
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+/* VIDEO SETTINGS */
+
+/* TOURDATES SETTINGS */
+
+/* SOCIAL MEDIA SETTINGS */
+
+/* FOOTER SETTINGS */
+
+/* MISC */
