@@ -3,8 +3,9 @@ import Video from './components/Video';
 import Tourdates from './components/Tourdates';
 import SocialMedia from './components/SocialMedia';
 import Footer from './components/Footer';
+import secrets from './secrets.json';
 
-const API_KEY = 'e892394b9e496f2cb8ca3ad96495e695';
+const API_KEY = secrets.API_KEY;
 
 export default class App extends React.Component {
     componentDidMount = async () => {
@@ -12,6 +13,7 @@ export default class App extends React.Component {
             `https://rest.bandsintown.com/artists/metallica/events?app_id=${API_KEY}`
         );
         const data = await api_call.json();
+        // setState
         console.log('Data from API call: ', data);
     };
 
