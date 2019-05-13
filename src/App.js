@@ -12,8 +12,8 @@ export default class App extends React.Component {
                 <div className="flex_container">
                     <Video />
                     <Tourdates />
-                    <SocialMedia />
                     <Spotify />
+                    <SocialMedia />
                     <Footer />
                 </div>
             </React.Fragment>

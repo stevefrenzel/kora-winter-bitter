@@ -2,7 +2,7 @@ import React from 'react';
 
 const SocialMedia = () => (
     <React.Fragment>
-        <div className="component_container">
+        <div className="component_container social_media_component">
             <h1>Social Media component</h1>
             <div className="icons">
                 <a
@@ -25,6 +25,13 @@ const SocialMedia = () => (
                     rel="noopener noreferrer"
                 >
                     <i className="fab fa-twitter-square" />
+                </a>
+                <a
+                    href="https://www.youtube.com/channel/UCBP_NZMedZzJpvR9LD2aaiw"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    <i className="fab fa-youtube-square" />
                 </a>
                 <a
                     href="https://korawinter.bandcamp.com/merch"
