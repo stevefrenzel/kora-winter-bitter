@@ -1,21 +1,23 @@
 import React from 'react';
 import logo from '../images/logo.png';
 import video from '../video/background_video.mp4';
-
-// const audio_loop = document.getElementById('background_audio');
+import audio from '../audio/loop_03.mp3';
 
 export default class Video extends React.Component {
     constructor(props) {
         super(props);
         this.startVideoAndAudio = this.startVideoAndAudio.bind(this);
         this.video_loop = React.createRef();
+        this.audio_loop = React.createRef();
     }
 
     startVideoAndAudio() {
         if (this.video_loop.current.paused) {
             this.video_loop.current.play();
+            this.audio_loop.current.play();
         } else {
             this.video_loop.current.pause();
+            this.audio_loop.current.pause();
         }
     }
 
@@ -32,12 +34,21 @@ export default class Video extends React.Component {
                             id="background_video"
                             ref={this.video_loop}
                         />
+                        <audio
+                            src={audio}
+                            type="audio/mpeg"
+                            loop
+                            id="background_audio"
+                            ref={this.audio_loop}
+                        />
                     </div>
-                    <div
-                        className="image_container"
-                        onClick={this.startVideoAndAudio}
-                    >
-                        <img src={logo} alt="Bitter logo" id="logo" />
+                    <div className="image_container">
+                        <img
+                            src={logo}
+                            alt="Bitter logo"
+                            id="logo"
+                            onClick={this.startVideoAndAudio}
+                        />
                     </div>
                 </div>
             </React.Fragment>
@@ -48,4 +59,4 @@ export default class Video extends React.Component {
 // TO DO
 
 // generate background audio randomly
-// generate fixed image randomly
+// generate poster image randomly

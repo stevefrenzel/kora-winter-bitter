@@ -8,6 +8,11 @@ body {
     margin: 0;
     background-color: black;
     color: white;
+    font-family: 'Montserrat', sans-serif;
+}
+
+a {
+    color: grey;
 }
 
 .flex_container {
@@ -96,19 +101,20 @@ body {
 /* TOURDATES SETTINGS */
 
 .tourdates_component {
-    background-color: tomato;
+    background-color: #222831;
+    padding: 250px 0 250px 0;
 }
 
 /* SPOTIFY SETTINGS */
 
 .spotify_component {
-    background-color: grey;
+    background-color: #222831;
 }
 
 /* SOCIAL MEDIA SETTINGS */
 
 .social_media_component {
-    background-color: gold;
+    background-color: #222831;
 }
 
 .icons {
@@ -117,7 +123,7 @@ body {
 /* FOOTER SETTINGS */
 
 .footer_component {
-    background-color: darkred;
+    background-color: #222831;
 }
 
 /* MISC */

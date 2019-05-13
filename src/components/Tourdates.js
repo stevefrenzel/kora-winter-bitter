@@ -26,7 +26,6 @@ export default class Tourdates extends React.Component {
         return (
             <React.Fragment>
                 <div className="component_container tourdates_component">
-                    <h1>Tourdates Component</h1>
                     {this.state.bandsInTown.map(event => {
                         return (
                             <div key={event.id}>
