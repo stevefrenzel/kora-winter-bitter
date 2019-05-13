@@ -78,11 +78,19 @@ body {
     }
 }
 
-img {
+#logo {
     z-index: -555;
     width: 900px;
     height: auto;
-    margin: 200px 0 400px 0;
+    margin: 200px 0 500px 0;
+}
+
+#logo:hover {
+    cursor: pointer;
+}
+
+.component_container h1:hover {
+    cursor: pointer;
 }
 
 /* TOURDATES SETTINGS */
