@@ -60,3 +60,4 @@ export default class Video extends React.Component {
 
 // generate background audio randomly
 // generate poster image randomly
+// blur out when scrolling down

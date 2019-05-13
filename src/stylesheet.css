@@ -103,6 +103,22 @@ a {
 .tourdates_component {
     background-color: #222831;
     padding: 250px 0 250px 0;
+    text-align: center;
+}
+
+.tourdates_component p {
+    letter-spacing: 2px;
+    font-size: 18px;
+}
+
+.tourdates_component a {
+    text-decoration: none;
+}
+
+/* BAND SETTINGS */
+
+#band_logo {
+    width: 30%;
 }
 
 /* SPOTIFY SETTINGS */

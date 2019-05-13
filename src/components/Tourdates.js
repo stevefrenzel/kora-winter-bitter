@@ -30,17 +30,19 @@ export default class Tourdates extends React.Component {
                         return (
                             <div key={event.id}>
                                 <p>
+                                    On{' '}
                                     {moment(event.datetime).format('MMM Do YY')}{' '}
-                                    | {event.venue.city} | {event.venue.country}{' '}
-                                    | {event.venue.name} |{' '}
+                                    in {event.venue.city} ({event.venue.country}
+                                    ) at {event.venue.name} |{' '}
                                     <a
                                         href={event.url}
                                         target="_blank"
                                         rel="noopener noreferrer"
                                     >
-                                        Buy tickets
+                                        Tickets
                                     </a>
                                 </p>
+                                <p>…</p>
                             </div>
                         );
                     })}
