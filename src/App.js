@@ -2,21 +2,10 @@ import React from 'react';
 import Video from './components/Video';
 import Tourdates from './components/Tourdates';
 import SocialMedia from './components/SocialMedia';
+import Spotify from './components/Spotify';
 import Footer from './components/Footer';
-import secrets from './secrets.json';
-
-const API_KEY = secrets.API_KEY;
 
 export default class App extends React.Component {
-    componentDidMount = async () => {
-        const api_call = await fetch(
-            `https://rest.bandsintown.com/artists/metallica/events?app_id=${API_KEY}`
-        );
-        const data = await api_call.json();
-        // setState
-        console.log('Data from API call: ', data);
-    };
-
     render() {
         return (
             <React.Fragment>
@@ -24,14 +13,10 @@ export default class App extends React.Component {
                     <Video />
                     <Tourdates />
                     <SocialMedia />
+                    <Spotify />
                     <Footer />
                 </div>
             </React.Fragment>
         );
     }
 }
-
-// TO DO:
-
-// make the API call here and pass props to Tourdates OR
-// do it directly in Tourdates?
