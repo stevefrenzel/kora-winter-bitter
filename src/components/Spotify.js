@@ -1,20 +1,35 @@
 import React from 'react';
+import secrets from '../secrets.json';
 
-const Spotify = () => (
-    <React.Fragment>
-        <div className="component_container spotify_component">
-            <h1>Spotify component</h1>
-            <iframe
-                src="https://open.spotify.com/embed/album/1aj7iAfh1c1io39LPNi3t1"
-                width="300"
-                height="380"
-                frameBorder="0"
-                allowtransparency="true"
-                allow="encrypted-media"
-                title="Kora Winter"
-            />
-        </div>
-    </React.Fragment>
-);
+const SPOTIFY_ID = secrets.SPOTIFY_ID;
+const SPOTIFY_SECRET = secrets.SPOTIFY_SECRET;
 
-export default Spotify;
+export default class Spotify extends React.Component {
+    state = {};
+
+    componentDidMount = () => {
+        fetch('https://accounts.spotify.com/api/token', {
+            method: 'POST',
+            mode: 'no-cors',
+            body: 'grant_type=client_credentials',
+            'Content-Type': 'application/x-www-form-urlencoded',
+            headers: {
+                'Access-Control-Allow-Origin': '*',
+                Authorization:
+                    'Basic ' + btoa(`${SPOTIFY_ID}:${SPOTIFY_SECRET}`)
+            }
+        }).then(data => {
+            console.log('Data from fetch: ', data);
+        });
+    };
+
+    render() {
+        return (
+            <React.Fragment>
+                <div className="component_container spotify_component">
+                    <h1>Spotify Component</h1>
+                </div>
+            </React.Fragment>
+        );
+    }
+}

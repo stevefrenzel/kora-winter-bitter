@@ -4,10 +4,11 @@ import secrets from '../secrets.json';
 const moment = require('moment');
 moment().format();
 
-const API_KEY = secrets.API_KEY;
+const API_KEY = secrets.BANDSINTOWN_ID;
 
 export default class Tourdates extends React.Component {
     state = {};
+
     componentDidMount = async () => {
         const api_call = await fetch(
             `https://rest.bandsintown.com/artists/architects/events?app_id=${API_KEY}`

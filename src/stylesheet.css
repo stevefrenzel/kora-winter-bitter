@@ -8,7 +8,6 @@ body {
     margin: 0;
     background-color: black;
     color: white;
-    font-family: 'Montserrat', sans-serif;
 }
 
 a {
@@ -134,12 +133,6 @@ a {
 }
 
 .icons {
-}
-
-/* FOOTER SETTINGS */
-
-.footer_component {
-    background-color: #222831;
 }
 
 /* MISC */

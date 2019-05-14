@@ -1,23 +1,19 @@
 import React from 'react';
 import logo from '../images/logo.png';
-import video from '../video/background_video.mp4';
-import audio from '../audio/loop_03.mp3';
+import video from '../video/background_video_hi_res.mp4';
 
 export default class Video extends React.Component {
     constructor(props) {
         super(props);
-        this.startVideoAndAudio = this.startVideoAndAudio.bind(this);
+        this.startVideo = this.startVideo.bind(this);
         this.video_loop = React.createRef();
-        this.audio_loop = React.createRef();
     }
 
-    startVideoAndAudio() {
+    startVideo() {
         if (this.video_loop.current.paused) {
             this.video_loop.current.play();
-            this.audio_loop.current.play();
         } else {
             this.video_loop.current.pause();
-            this.audio_loop.current.pause();
         }
     }
 
@@ -29,17 +25,10 @@ export default class Video extends React.Component {
                         <video
                             src={video}
                             type="video/mp4"
-                            poster="./images/screenshot_01.png"
+                            poster="./images/screenshot_03.png"
                             loop
                             id="background_video"
                             ref={this.video_loop}
-                        />
-                        <audio
-                            src={audio}
-                            type="audio/mpeg"
-                            loop
-                            id="background_audio"
-                            ref={this.audio_loop}
                         />
                     </div>
                     <div className="image_container">
@@ -47,7 +36,7 @@ export default class Video extends React.Component {
                             src={logo}
                             alt="Bitter logo"
                             id="logo"
-                            onClick={this.startVideoAndAudio}
+                            onClick={this.startVideo}
                         />
                     </div>
                 </div>
@@ -58,6 +47,5 @@ export default class Video extends React.Component {
 
 // TO DO
 
-// generate background audio randomly
 // generate poster image randomly
 // blur out when scrolling down
