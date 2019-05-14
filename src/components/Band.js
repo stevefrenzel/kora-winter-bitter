@@ -2,8 +2,10 @@ import React from 'react';
 
 const Band = () => (
     <React.Fragment>
-        <div className="component_container band_component">
-            <h1>Band Photo Component</h1>
+        {/* GROUP 3 */}
+        <div id="band_photo_component" className="parallax__group">
+            <div className="parallax__layer parallax__layer--fore" />
+            <div className="parallax__layer parallax__layer--base" />
         </div>
     </React.Fragment>
 );

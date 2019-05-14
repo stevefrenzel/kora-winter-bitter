@@ -1,138 +1,184 @@
 /* GLOBAL SETTINGS */
 
-* {
-    box-sizing: border-box;
+body,
+html {
+    overflow: hidden;
 }
 
 body {
-    margin: 0;
+    font: 100% / 1.5 Arial;
     background-color: black;
-    color: white;
+}
+
+* {
+    margin: 0;
+    padding: 0;
 }
 
 a {
-    color: grey;
+    text-decoration: none;
+    color: white;
 }
 
-.flex_container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+img {
+    width: 100px;
 }
 
-.component_container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    width: 100%;
+/* PARALLAX SETTINGS */
+
+.parallax {
+    height: 500px; /* fallback for older browsers */
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-perspective: 300px;
+    perspective: 300px;
 }
 
-.fab {
-    font-size: 100px;
-    margin: 30px;
+.parallax__group {
+    position: relative;
+    height: 500px; /* fallback for older browsers */
+    height: 100vh;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
 }
 
-/* VIDEO SETTINGS */
-
-.video_container {
-    z-index: -666;
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    overflow: hidden;
-
-    filter: grayscale(100%);
-}
-
-.video_container video {
+.parallax__layer {
     position: absolute;
     top: 0;
     left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+/* this isn't nice, how to add changes to existing class? */
+
+.parallax__layer_tourdates {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 12%;
+    text-align: center;
+}
+
+.parallax__layer--fore {
+    -webkit-transform: translateZ(90px) scale(0.7);
+    transform: translateZ(90px) scale(0.7);
+    z-index: 1;
+}
+
+.parallax__layer--base {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    z-index: 4;
+}
+
+.parallax__layer--back {
+    -webkit-transform: translateZ(-300px) scale(2);
+    transform: translateZ(-300px) scale(2);
+    z-index: 3;
+}
+
+/* COMPONENT SETTINGS */
+
+/* GROUP 1 */
+/* slides over tourdates_component (group 3) */
+
+#video_component {
+    z-index: 5;
+}
+#video_component .parallax__layer--base {
+    background-color: red;
+}
+
+#video_component video {
     width: 100%;
     height: 100%;
 }
 
-@media (min-aspect-ratio: 16/9) {
-    .video_container video {
-        width: 100%;
-        height: auto;
-    }
+/* GROUP 2 */
+/* slides under video_component (group 1) and band_photo_component (group 3) */
+
+.tourdates_foreground {
+    font-size: 24px;
+    padding: 10px;
 }
 
-@media (max-aspect-ratio: 16/9) {
-    .video_container video {
-        width: auto;
-        height: 100%;
-    }
+#tourdates_component {
+    z-index: 4;
+}
+#tourdates_component .parallax__layer--fore {
+    color: white;
+}
+#tourdates_component .parallax__layer--base {
+    background-color: black;
+    color: white;
 }
 
-@media (max-width: 767px) {
-    .video_container {
-        background: url('./images/screenshot_01.png') center center / cover
-            no-repeat;
-    }
+/* GROUP 3 */
+/* slides over tourdates_component (group 2) and spotify_component (group 4) */
 
-    .video_container video {
-        display: none;
-    }
+#band_photo_component {
+    z-index: 3;
 }
-
-#logo {
-    z-index: -555;
-    width: 900px;
-    height: auto;
-    margin: 200px 0 500px 0;
+#band_photo_component .parallax__layer--fore {
+    background-image: url('images/band_logo.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
 }
-
-#logo:hover {
-    cursor: pointer;
+#band_photo_component .parallax__layer--base {
+    background-image: url('images/kora_winter_band.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
-
-.component_container h1:hover {
-    cursor: pointer;
-}
-
-/* TOURDATES SETTINGS */
-
-.tourdates_component {
-    background-color: #222831;
-    padding: 250px 0 250px 0;
-    text-align: center;
-}
-
-.tourdates_component p {
-    letter-spacing: 2px;
-    font-size: 18px;
-}
-
-.tourdates_component a {
-    text-decoration: none;
-}
-
-/* BAND SETTINGS */
 
 #band_logo {
     width: 30%;
 }
 
-/* SPOTIFY SETTINGS */
+/* GROUP 4 */
+/* slides over group social_media_component (group 5) */
 
-.spotify_component {
-    background-color: #222831;
+#spotify_component {
+    z-index: 2;
+}
+#spotify_component .parallax__layer--fore {
+    color: white;
+}
+#spotify_component .parallax__layer--base {
+    background-color: black;
+    color: white;
 }
 
-/* SOCIAL MEDIA SETTINGS */
+/* GROUP 5 */
+/* slides under spotify_component (group 4) */
 
-.social_media_component {
-    background-color: #222831;
+#social_media_component {
+    z-index: 1;
+}
+#social_media_component .parallax__layer--back {
+    background-color: gray;
+}
+
+.fab {
+    font-size: 150px;
+    margin: 40px;
 }
 
 .icons {
+    width: 100vw;
 }
 
 /* MISC */
+
+.center_content {
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}

@@ -12,9 +12,9 @@ export default class Spotify extends React.Component {
             method: 'POST',
             mode: 'no-cors',
             body: 'grant_type=client_credentials',
-            'Content-Type': 'application/x-www-form-urlencoded',
             headers: {
-                'Access-Control-Allow-Origin': '*',
+                'Content-Type': 'application/x-www-form-urlencoded',
+                // 'Access-Control-Allow-Origin': '*',
                 Authorization:
                     'Basic ' + btoa(`${SPOTIFY_ID}:${SPOTIFY_SECRET}`)
             }
@@ -26,8 +26,18 @@ export default class Spotify extends React.Component {
     render() {
         return (
             <React.Fragment>
-                <div className="component_container spotify_component">
-                    <h1>Spotify Component</h1>
+                {/* GROUP 4 */}
+                <div id="spotify_component" className="parallax__group">
+                    <div className="parallax__layer parallax__layer--fore">
+                        <h1 className="center_content">
+                            SPOTIFY PLAYER (Group 4)
+                        </h1>
+                    </div>
+                    <div className="parallax__layer parallax__layer--base">
+                        <h1 className="center_content">
+                            SPOTIFY COMPONENT (Group 4)
+                        </h1>
+                    </div>
                 </div>
             </React.Fragment>
         );

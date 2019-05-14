@@ -26,27 +26,35 @@ export default class Tourdates extends React.Component {
         }
         return (
             <React.Fragment>
-                <div className="component_container tourdates_component">
-                    {this.state.bandsInTown.map(event => {
-                        return (
-                            <div key={event.id}>
-                                <p>
-                                    On{' '}
-                                    {moment(event.datetime).format('MMM Do YY')}{' '}
-                                    in {event.venue.city} ({event.venue.country}
-                                    ) at {event.venue.name} |{' '}
-                                    <a
-                                        href={event.url}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                    >
-                                        Tickets
-                                    </a>
-                                </p>
-                                <p>…</p>
-                            </div>
-                        );
-                    })}
+                {/* GROUP 2*/}
+                <div id="tourdates_component" className="parallax__group">
+                    <div className="parallax__layer_tourdates parallax__layer--fore">
+                        {this.state.bandsInTown.map(event => {
+                            return (
+                                <div
+                                    key={event.id}
+                                    className="tourdates_foreground"
+                                >
+                                    <p>
+                                        {moment(event.datetime).format(
+                                            'MMM Do YY'
+                                        )}{' '}
+                                        • {event.venue.city} (
+                                        {event.venue.country}) •{' '}
+                                        {event.venue.name} •{' '}
+                                        <a
+                                            href={event.url}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                        >
+                                            Tickets
+                                        </a>
+                                    </p>
+                                </div>
+                            );
+                        })}
+                    </div>
+                    <div className="parallax__layer parallax__layer--base" />
                 </div>
             </React.Fragment>
         );
