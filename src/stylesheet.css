@@ -7,6 +7,8 @@ html {
 
 body {
     background-color: black;
+    color: white;
+    font-family: 'Roboto Mono', monospace;
 }
 
 * {
@@ -114,8 +116,6 @@ a {
 /* slides under video_component (group 1) and band_photo_component (group 3) */
 
 .tourdates_foreground {
-    font-family: 'Roboto Mono', monospace;
-    color: white;
     font-size: 32px;
     margin: 20px;
 }
@@ -189,6 +189,43 @@ a {
 #spotify_component .parallax__layer--base {
     background-color: black;
     color: white;
+}
+
+.image_wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.album_wrapper {
+    text-align: center;
+}
+
+.image_wrapper img {
+    width: 300px;
+    margin: 50px;
+    filter: grayscale(75%);
+    transition: all 1s ease-out;
+}
+
+.image_wrapper img:hover {
+    filter: grayscale(0%);
+    cursor: pointer;
+}
+
+@media screen and (max-width: 1200px) {
+    .image_wrapper img {
+        width: 250px;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .image_wrapper img {
+        width: 175px;
+    }
+
+    .image_wrapper {
+        flex-wrap: wrap;
+    }
 }
 
 /* GROUP 5 */

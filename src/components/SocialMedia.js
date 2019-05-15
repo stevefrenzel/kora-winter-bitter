@@ -34,6 +34,7 @@ const SocialMedia = () => (
                     >
                         <i className="fab fa-bandcamp" />
                     </a>
+                    <footer>&copy; by Steve Frenzel</footer>
                 </div>
             </div>
         </div>
