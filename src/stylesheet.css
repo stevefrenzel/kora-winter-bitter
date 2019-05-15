@@ -6,7 +6,6 @@ html {
 }
 
 body {
-    font: 100% / 1.5 Arial;
     background-color: black;
 }
 
@@ -118,19 +117,49 @@ a {
 /* slides under video_component (group 1) and band_photo_component (group 3) */
 
 .tourdates_foreground {
-    font-size: 24px;
-    padding: 10px;
+    font-family: 'Roboto Mono', monospace;
+    color: white;
+    font-size: 32px;
+    margin: 20px;
 }
 
 #tourdates_component {
     z-index: 4;
 }
-#tourdates_component .parallax__layer--fore {
-    color: white;
+
+#tourdates_component a {
+    color: grey;
+    transition: all 1s ease-out;
 }
-#tourdates_component .parallax__layer--base {
-    background-color: black;
-    color: white;
+
+#tourdates_component a:hover {
+    color: red;
+}
+
+@media screen and (max-width: 1400px) {
+    .tourdates_foreground {
+        font-size: 24px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .tourdates_foreground {
+        font-size: 16px;
+    }
+
+    #tourdates_component .parallax__layer--fore {
+        margin: -100px 50px 0px 50px;
+    }
+}
+
+@media screen and (max-width: 414px) {
+    .tourdates_foreground {
+        font-size: 12px;
+    }
+
+    #tourdates_component .parallax__layer--fore {
+        margin: -80px 50px 0px 50px;
+    }
 }
 
 /* GROUP 3 */
@@ -168,6 +197,9 @@ a {
 /* GROUP 5 */
 /* slides under spotify_component (group 4) */
 
+/* TO DO: */
+/* smaller screensize: always two in one row */
+
 #social_media_component {
     z-index: 1;
 }
@@ -180,7 +212,7 @@ a {
 }
 
 .fab {
-    font-size: 150px;
+    font-size: 15vh;
     margin: 40px;
     transition: all 1s ease-out;
 }

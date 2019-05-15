@@ -12,6 +12,7 @@ export default class Spotify extends React.Component {
             method: 'POST',
             mode: 'no-cors',
             body: 'grant_type=client_credentials',
+
             headers: {
                 'Content-Type': 'application/x-www-form-urlencoded',
                 // 'Access-Control-Allow-Origin': '*',
