@@ -19,11 +19,6 @@ a {
     text-decoration: none;
     color: white;
 }
-
-img {
-    width: 100px;
-}
-
 /* PARALLAX SETTINGS */
 
 .parallax {
@@ -95,6 +90,28 @@ img {
 #video_component video {
     width: 100%;
     height: 100%;
+    object-fit: cover;
+}
+
+#bitter_logo {
+    width: 50%;
+    transition: all 1s ease-out;
+}
+
+#bitter_logo:hover {
+    cursor: pointer;
+    filter: blur(50px);
+}
+
+@media (max-width: 767px) {
+    #video_component .parallax__layer--base {
+        background: url('images/screenshot_02.png') center center / cover
+            no-repeat;
+    }
+
+    video {
+        display: none;
+    }
 }
 
 /* GROUP 2 */
@@ -134,11 +151,6 @@ img {
     background-repeat: no-repeat;
     background-position: center;
 }
-
-#band_logo {
-    width: 30%;
-}
-
 /* GROUP 4 */
 /* slides over group social_media_component (group 5) */
 
@@ -160,16 +172,25 @@ img {
     z-index: 1;
 }
 #social_media_component .parallax__layer--back {
-    background-color: gray;
+    background-image: url('images/album_artwork.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    filter: grayscale(90%) brightness(40%);
 }
 
 .fab {
     font-size: 150px;
     margin: 40px;
+    transition: all 1s ease-out;
+}
+
+.fab:hover {
+    color: red;
 }
 
 .icons {
-    width: 100vw;
+    width: 100%;
 }
 
 /* MISC */
