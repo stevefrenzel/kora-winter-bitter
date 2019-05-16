@@ -98,10 +98,10 @@ a {
 
 #bitter_logo:hover {
     cursor: pointer;
-    filter: blur(10px);
+    filter: blur(5px);
 }
 
-@media (max-width: 700px) {
+@media (max-width: 800px) {
     #video_component .parallax__layer--base {
         background: url('images/screenshot_02.png') center center / cover
             no-repeat;
@@ -109,6 +109,11 @@ a {
 
     video {
         display: none;
+    }
+
+    #bitter_logo:hover {
+        cursor: auto;
+        filter: blur(0px);
     }
 }
 
@@ -133,13 +138,25 @@ a {
     color: red;
 }
 
-@media screen and (max-width: 1400px) {
+@media screen and (max-width: 1500px) {
+    .tourdates_foreground {
+        font-size: 28px;
+    }
+}
+
+@media screen and (max-width: 1300px) {
     .tourdates_foreground {
         font-size: 24px;
     }
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 1000px) {
+    .tourdates_foreground {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 900px) {
     .tourdates_foreground {
         font-size: 18px;
     }
