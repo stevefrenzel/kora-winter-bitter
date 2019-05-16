@@ -23,9 +23,7 @@ export default class Video extends React.Component {
             } else {
                 this.video_loop.current.pause();
             }
-        } catch (e) {
-            console.log('startVideo() ERROR: ', e);
-        }
+        } catch (e) {}
     }
 
     dontLoadVideo() {
@@ -33,9 +31,7 @@ export default class Video extends React.Component {
             var getDisplay = window
                 .getComputedStyle(this.video_loop.current)
                 .getPropertyValue('display');
-        } catch (e) {
-            console.log('ERROR: ', e);
-        }
+        } catch (e) {}
 
         if (getDisplay === 'none') {
             this.setState({ stopVideoLoad: true });

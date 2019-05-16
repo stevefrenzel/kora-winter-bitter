@@ -15,12 +15,10 @@ export default class Spotify extends React.Component {
     //         method: 'POST',
     //         mode: 'no-cors',
     //         body: 'grant_type=client_credentials',
-    //
     //         headers: {
-    //             'Content-Type': 'application/x-www-form-urlencoded',
-    //             // 'Access-Control-Allow-Origin': '*',
     //             Authorization:
-    //                 'Basic ' + btoa(`${SPOTIFY_ID}:${SPOTIFY_SECRET}`)
+    //                 'Basic ' + btoa(`${SPOTIFY_ID}:${SPOTIFY_SECRET}`),
+    //             'Content-Type': 'application/x-www-form-urlencoded'
     //         }
     //     }).then(data => {
     //         console.log('Data from fetch: ', data);
@@ -39,12 +37,27 @@ export default class Spotify extends React.Component {
                                 <p>Bitter</p>
                             </div>
                             <div className="album_wrapper">
-                                <img src={welk} alt="Kora Winter - Welk" />
-                                <p>Welk</p>
+                                <a
+                                    href="https://open.spotify.com/album/1aj7iAfh1c1io39LPNi3t1?si=pTUd83UTRbGBnsKjL9Wckw"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    <img src={welk} alt="Kora Winter - Welk" />
+                                    <p>Welk</p>
+                                </a>
                             </div>
                             <div className="album_wrapper">
-                                <img src={blueht} alt="Kora Winter - Blueht" />
-                                <p>Blüht</p>
+                                <a
+                                    href="https://open.spotify.com/album/5rXw9rHkAbbsjegFTu5PuD?si=SxrcdTwTRZ6eVKcspeiRTA"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    <img
+                                        src={blueht}
+                                        alt="Kora Winter - Blueht"
+                                    />
+                                    <p>Blüht</p>
+                                </a>
                             </div>
                         </div>
                     </div>

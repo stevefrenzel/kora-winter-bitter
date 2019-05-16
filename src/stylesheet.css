@@ -20,6 +20,7 @@ a {
     text-decoration: none;
     color: white;
 }
+
 /* PARALLAX SETTINGS */
 
 .parallax {
@@ -227,6 +228,7 @@ a {
 .image_wrapper img:hover {
     filter: grayscale(0%);
     cursor: pointer;
+    transform: scale(1.1);
 }
 
 @media screen and (max-width: 1200px) {
@@ -274,6 +276,16 @@ a {
 
 .icons {
     width: 100%;
+}
+
+@media screen and (max-width: 832px) {
+    .icons {
+        width: 400px;
+    }
+
+    .fab {
+        font-size: 10vh;
+    }
 }
 
 /* MISC */
