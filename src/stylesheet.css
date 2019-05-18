@@ -124,6 +124,12 @@ a {
 .tourdates_foreground {
     font-size: 32px;
     margin: 20px;
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.visible {
+    opacity: 1;
 }
 
 #tourdates_component {
