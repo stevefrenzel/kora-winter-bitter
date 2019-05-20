@@ -11,7 +11,7 @@ export default class Tourdates extends React.Component {
 
     componentDidMount = async () => {
         const api_call = await fetch(
-            `https://rest.bandsintown.com/artists/rammstein/events?app_id=${API_KEY}`
+            `https://rest.bandsintown.com/artists/metallica/events?app_id=${API_KEY}`
         );
         const data = await api_call.json();
         this.setState({
