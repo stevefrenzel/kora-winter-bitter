@@ -4,6 +4,7 @@ import Video from './components/Video';
 import Band from './components/Band';
 import Spotify from './components/Spotify';
 import SocialMedia from './components/SocialMedia';
+import LegalNotice from './components/LegalNotice';
 
 export default class App extends React.Component {
     render() {
@@ -14,6 +15,7 @@ export default class App extends React.Component {
                     <Band />
                     <Spotify />
                     <SocialMedia />
+                    <LegalNotice />
                 </div>
             </React.Fragment>
         );
