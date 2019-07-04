@@ -31,24 +31,14 @@ export default class Tourdates extends React.Component {
                     <div className="parallax__layer_tourdates parallax__layer--fore">
                         {this.state.bandsInTown.map(event => {
                             return (
-                                <div
-                                    key={event.id}
-                                    className="tourdates_foreground visible"
-                                >
+                                <div key={event.id} className="tourdates_foreground visible">
                                     <p>
-                                        {moment(event.datetime).format(
-                                            'MMM Do YY'
-                                        )}{' '}
+                                        {moment(event.datetime).format('MMM Do YY')}{' '}
                                         • {event.venue.city} (
+                                            
                                         {event.venue.country}) •{' '}
                                         {event.venue.name} •{' '}
-                                        <a
-                                            href={event.url}
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                        >
-                                            Tickets
-                                        </a>
+                                        <a href={event.url} target="_blank" rel="noopener noreferrer">Tickets</a>
                                     </p>
                                 </div>
                             );
