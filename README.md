@@ -1,5 +1,17 @@
 # Single Page Website built with [React](https://reactjs.org/) ([SPICED Academy](https://www.spiced-academy.com/) project)
 
+## To Do List
+
+- Bilder und Video in niedriger Auflösung zur Verkürzung der Ladezeit und weniger Datenverbrauch
+- Impressum als Pop Up oder als weitere Komponente hinzufügen?
+- an welcher Position soll Merch-Komponente platziert werden?
+- "Bitter" Cover aktualisieren
+- Media Queries überarbeiten
+- Cross Browser Compability:
+  - Firefox: √
+  - Chrome: Problem mit letzten layers
+  - Opera: "Bitter" Logo wird unvollständig angezeigt, großer Abstand von letzter layer zu div.parallax
+
 About the goal of this project:
 
 > (...) You get to decide what you work on but there are a few guidelines you must follow.
