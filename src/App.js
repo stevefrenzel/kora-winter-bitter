@@ -4,20 +4,18 @@ import Video from './components/Video';
 import Band from './components/Band';
 import Spotify from './components/Spotify';
 import SocialMedia from './components/SocialMedia';
-import LegalNotice from './components/LegalNotice';
+// import LegalNotice from './components/LegalNotice';
+// import Merch from './components/Merch';
 
 export default class App extends React.Component {
     render() {
         return (
-            <React.Fragment>
                 <div className="parallax">
                     <Video />
                     <Band />
                     <Spotify />
                     <SocialMedia />
-                    <LegalNotice />
                 </div>
-            </React.Fragment>
         );
     }
 }
