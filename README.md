@@ -1,80 +1,90 @@
-# Single Page Website built with [React](https://reactjs.org/) ([SPICED Academy](https://www.spiced-academy.com/) project)
+# Kora Winter - "Bitter"
 
-## To Do List
+###### Please note this is a work in progress website and documentation, so content and appearance will change during time.
 
-- Bilder und Video in niedriger Auflösung zur Verkürzung der Ladezeit und weniger Datenverbrauch
-- Impressum als Pop Up oder als weitere Komponente hinzufügen?
-- an welcher Position soll Merch-Komponente platziert werden?
-- "Bitter" Cover aktualisieren
-- Media Queries überarbeiten
-- Cross Browser Compability:
-  - Firefox: √
-  - Chrome: Problem mit letzten layers
-  - Opera: "Bitter" Logo wird unvollständig angezeigt, großer Abstand von letzter layer zu div.parallax
+## 1. Introduction 👋
 
-About the goal of this project:
+My name is Steve and I'm a Junior Full Stack Web Developer from Berlin, Germany. I graduated from coding bootcamp [SPICED Academy](https://www.spiced-academy.com/) in May 2019 and this was my final project. I've had the idea and concept for this website long before I started at [SPICED Academy](https://www.spiced-academy.com/), but before attending I was lacking the necessary skills to actually create it. 
 
-> (...) You get to decide what you work on but there are a few guidelines you must follow.
+Kora Winter is a metal band from Germany and this website accompanies the release of their upcoming release on September 13th 2019 called "Bitter". I've also worked with them together for years by now and this was a very obvious choice for me as a final project. 😎
 
-> Your project must be substantial - you want to end up with something you can proudly demo on graduation day and thereafter, a fitting capstone to your time at SPICED.
+This website was build with a JavaScript library called [React](https://reactjs.org/) and [the code for the parallax scrolling experience](https://keithclark.co.uk/articles/pure-css-parallax-websites/demo3/) was originally written by Keith Clark. His code was heavily customized for this project to meet the vision I had in mind.
 
-> Your project must also be achievable. You do not want to end the week with little more than a good idea.
+## 2. Idea 💡
 
-> It is ok if your project is just the first phase of a much larger project that could not possibly be achieved in one week, but it still must be a coherent and presentable piece of work on its own.
+You know what? It is beets. I've crashed into a beet truck. Remind me to thank John for a lovely weekend. God creates dinosaurs. God destroys dinosaurs. God creates Man. Man destroys God. Man creates Dinosaurs. So you two dig up, dig up dinosaurs? Is this my espresso machine? Wh-what is-h-how did you get my espresso machine?
 
-> This project is an opportunity to show what you have learned but it is also an opportunity to learn new things. It is expected that you will use things that we covered in class but you are welcome to try things with which you have no experience, provided that it seems reasonably certain that you will be able to accomplish your project's goals.
-
-## Structure
+## 3. Structure 🗂
 
 ```
 App.js
 |–– Video.js
 |–– Tourdates.js (if available)
-|–– Merch.js
 |–– Band.js
+|–– Merch.js
 |–– Spotify.js
 |–– SocialMedia.js
 |–– LegalNotice.js
 ```
-
-### 1. Video component
+### 1. `Video.js`
 
 <img src="/images/01_video_component.png">
 
 God creates dinosaurs. God destroys dinosaurs. God creates Man. Man destroys God. Man creates Dinosaurs. Did he just throw my cat out of the window? Did he just throw my cat out of the window? Do you have any idea how long it takes those cups to decompose.
 
-### 2.1 Merch component
+### 2.1 `Tourdates.js` (if available)
 
-<img src="https://images.unsplash.com/photo-1429962714451-bb934ecdc4ec?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80">
-
-I gave it a cold? I gave it a virus. A computer virus. Yeah, but your scientists were so preoccupied with whether or not they could, they didn't stop to think if they should. Forget the fat lady! You're obsessed with the fat lady! Drive us out of here!
-
-### 2.2 Tourdates component
-
-<img src="https://images.unsplash.com/photo-1463522689871-cb92fc985793?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1369&q=80">
+<img src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80">
 
 God creates dinosaurs. God destroys dinosaurs. God creates Man. Man destroys God. Man creates Dinosaurs. Did he just throw my cat out of the window? Did he just throw my cat out of the window? Do you have any idea how long it takes those cups to decompose.
 
-### 3. Band component
+### 2.2 `Band.js`
 
 <img src="/images/02_band_component.png">
 
 I gave it a cold? I gave it a virus. A computer virus. Yeah, but your scientists were so preoccupied with whether or not they could, they didn't stop to think if they should. Forget the fat lady! You're obsessed with the fat lady! Drive us out of here!
 
-### 4. Spotify component
+### 3. `Merch.js`
+
+<img src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80">
+
+I gave it a cold? I gave it a virus. A computer virus. Yeah, but your scientists were so preoccupied with whether or not they could, they didn't stop to think if they should. Forget the fat lady! You're obsessed with the fat lady! Drive us out of here!
+
+### 4. `Spotify.js`
 
 <img src="/images/03_spotify_component.png">
 
 God creates dinosaurs. God destroys dinosaurs. God creates Man. Man destroys God. Man creates Dinosaurs. Did he just throw my cat out of the window? Did he just throw my cat out of the window? Do you have any idea how long it takes those cups to decompose.
 
-### 5. Social Media component
+### 5. `SocialMedia.js`
 
-<img src="https://images.unsplash.com/photo-1495651779359-881fde1808a6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80">
+<img src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80">
 
 I gave it a cold? I gave it a virus. A computer virus. Yeah, but your scientists were so preoccupied with whether or not they could, they didn't stop to think if they should. Forget the fat lady! You're obsessed with the fat lady! Drive us out of here!
 
-### 6. Legal Notice component
+### 6. `LegalNotice.js`
 
-<img src="https://images.unsplash.com/photo-1494049694820-92a3163b10ad?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1322&q=80">
+<img src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80">
 
 God creates dinosaurs. God destroys dinosaurs. God creates Man. Man destroys God. Man creates Dinosaurs. Did he just throw my cat out of the window? Did he just throw my cat out of the window? Do you have any idea how long it takes those cups to decompose.
+
+
+## 4. To Do List ⚠️
+
+- create table of contents for documentation
+
+- Use video and pictures with lower resolution to decrease loading time
+
+- Make `LegalNotice.js` a modal / pop up
+
+- Update "Bitter" artwork in `Spotify.js`
+
+- Update media queries as certain components don't display correctly in certain resolutions
+
+- Create `Merch.js` similar to `Band.js` (background image with another image on top)
+
+- Check for cross browser compatibility:
+  - Firefox: LGTM
+  - Chrome: problem with bottom layers
+  - Opera: "Bitter" logo only partially displayed, big gap between bottom layer and `div.parallax`
+  - Safari: big gap between bottom layer and `div.parallax`
