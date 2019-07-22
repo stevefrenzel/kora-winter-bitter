@@ -6,8 +6,6 @@ export default class Video extends React.Component {
     constructor(props) {
         super(props);
         this.state = {};
-        this.startVideo = this.startVideo.bind(this);
-        this.dontLoadVideo = this.dontLoadVideo.bind(this);
         this.video_loop = React.createRef();
     }
 
@@ -16,7 +14,7 @@ export default class Video extends React.Component {
         window.addEventListener('resize', this.dontLoadVideo);
     }
 
-    startVideo() {
+    startVideo = () => {
         try {
             if (this.video_loop.current.paused) {
                 this.video_loop.current.play();
@@ -26,7 +24,7 @@ export default class Video extends React.Component {
         } catch (e) {}
     }
 
-    dontLoadVideo() {
+    dontLoadVideo = () => {
         try {
             var getDisplay = window
                 .getComputedStyle(this.video_loop.current)
@@ -44,27 +42,20 @@ export default class Video extends React.Component {
         return (
             <React.Fragment>
                 {/* GROUP 1*/}
-                <div
-                    id="video_component"
-                    className="parallax__group"
-                    onScroll={this.blurWhenScrolling}
-                >
+                <div id="video_component" className="parallax__group">
                     <div className="parallax__layer parallax__layer--base">
-                        {!this.state.stopVideoLoad && (
-                            <video src={video} ref={this.video_loop} loop />
-                        )}
+                        {!this.state.stopVideoLoad && (<video src={video} ref={this.video_loop} loop />)}
                     </div>
                     <div className="parallax__layer parallax__layer--fore">
-                        <img
-                            onClick={this.startVideo}
-                            src={logo}
-                            alt="Bitter logo"
-                            id="bitter_logo"
-                            className="center_content"
-                        />
+                        <img onClick={this.startVideo} src={logo} alt="Bitter logo" id="bitter_logo" className="center_content" />
                     </div>
                 </div>
             </React.Fragment>
         );
     }
 }
+
+// TO DO:
+
+// Look for an easier way prevent video from loading on mobile devices
+// Get video in lower resolution
