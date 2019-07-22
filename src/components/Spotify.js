@@ -43,3 +43,8 @@ export default class Spotify extends React.Component {
         );
     }
 }
+
+// TO DO:
+
+// reduce file size to decrease loading time
+// update "Bitter" artwork
