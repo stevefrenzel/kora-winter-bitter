@@ -189,6 +189,7 @@ a {
 #band_photo_component {
     z-index: 3;
 }
+
 #band_photo_component .parallax__layer--fore {
     background-image: url('images/band_logo.png');
     background-size: contain;
@@ -201,6 +202,24 @@ a {
     background-repeat: no-repeat;
     background-position: center;
 }
+
+#merch_photo_component {
+    z-index: 3;
+}
+
+#merch_photo_component .parallax__layer--fore {
+    background-image: url('images/MERCH-white.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#merch_photo_component .parallax__layer--base {
+    background-image: url('images/merch.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
 /* GROUP 4 */
 /* slides over group social_media_component (group 5) */
 
