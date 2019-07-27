@@ -7,13 +7,12 @@ export default class LegalNotice extends React.Component {
                 {/* GROUP 2*/}
                 <div id="tourdates_component" className="parallax__group">
 
-                    <div className="parallax__layer_tourdates parallax__layer--fore">
+                    <div className="parallax__layer_tourdates parallax__layer--fore legal_notice_content">
 
                         <section id="legalNotice">
-                            <h1>Legal Notice</h1>
                             <h2>Information in accordance with section 5 TMG</h2>
                             <p>Hakan Halaç</p>
-                            <p>Roseggerstraße 40</p>
+                            <p>Roseggerstrasse 40</p>
                             <p>12059 Berlin</p>
                             <p>Germany</p>
                         </section>
@@ -37,6 +36,7 @@ export default class LegalNotice extends React.Component {
 
                         <section id="disclaimer">
                             <h2>Disclaimer</h2>
+                            <br />
                             <h3>Accountability for content</h3>
                             <p>
                                 The contents of our pages have been created with the utmost care. However, we cannot guarantee the contents’ accuracy, completeness or topicality. 
@@ -44,12 +44,15 @@ export default class LegalNotice extends React.Component {
                                 In this context, please note that we are accordingly not obliged to monitor merely the transmitted or saved information of third parties, 
                                 or investigate circumstances pointing to illegal activity. Our obligations to remove or block the use of information under generally applicable 
                                 laws remain unaffected by this as per §§ 8 to 10 of the Telemedia Act (TMG).
-                            </p> 
+                            </p>
+                            <br />
                             <h3>Accountability for links</h3>    
                             <p>
                                 Responsibility for the content of external links (to web pages of third parties) lies solely with the operators of the linked pages. 
                                 No violations were evident to us at the time of linking. Should any legal infringement become known to us, we will remove the respective 
-                                link immediately.</p> 
+                                link immediately.
+                            </p> 
+                            <br />
                             <h3>Copyright</h3>    
                             <p>
                                 Our web pages and their contents are subject to German copyright law. Unless expressly permitted by law (§ 44a et seq. of the copyright law), 
@@ -68,9 +71,3 @@ export default class LegalNotice extends React.Component {
         );
     }
 }
-
-// TO DO:
-
-// make this one a modal / pop up
-// OR
-// another component that only shows after clicking
