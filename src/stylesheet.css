@@ -1,4 +1,6 @@
+/* //////////////// */
 /* GLOBAL SETTINGS */
+/* ////////////// */
 
 body,
 html {
@@ -8,7 +10,7 @@ html {
 body {
     background-color: black;
     color: white;
-    font-family: 'Roboto Mono', monospace;
+    font-family: 'Ubuntu', sans-serif;
 }
 
 * {
@@ -21,7 +23,13 @@ a {
     color: white;
 }
 
+section {
+    margin: 10px;
+}
+
+/* ////////////////// */
 /* PARALLAX SETTINGS */
+/* //////////////// */
 
 .parallax {
     height: 500px; /* fallback for older browsers */
@@ -30,6 +38,7 @@ a {
     overflow-y: auto;
     -webkit-perspective: 300px;
     perspective: 300px;
+    background-color: lightgreen;
 }
 
 .parallax__group {
@@ -46,9 +55,8 @@ a {
     left: 0;
     right: 0;
     bottom: 0;
+    /* background-color: aquamarine; */
 }
-
-/* this isn't nice, how to add changes to existing class? */
 
 .parallax__layer_tourdates {
     position: absolute;
@@ -63,21 +71,26 @@ a {
     -webkit-transform: translateZ(90px) scale(0.7);
     transform: translateZ(90px) scale(0.7);
     z-index: 1;
+    /* background-color: royalblue; */
 }
 
 .parallax__layer--base {
     -webkit-transform: translateZ(0);
     transform: translateZ(0);
     z-index: 4;
+    /* background-color: tomato; */
 }
 
 .parallax__layer--back {
     -webkit-transform: translateZ(-300px) scale(2);
     transform: translateZ(-300px) scale(2);
     z-index: 3;
+    background-color: goldenrod;
 }
 
-/* COMPONENT SETTINGS */
+/* //////////////// */
+/* 1.1 VIDEO COMPONENT */
+/* ////////////// */
 
 /* GROUP 1 */
 /* slides over tourdates_component (group 3) */
@@ -102,21 +115,9 @@ a {
     filter: blur(5px);
 }
 
-@media (max-width: 800px) {
-    #video_component .parallax__layer--base {
-        background: url('images/screenshot_02.png') center center / cover
-            no-repeat;
-    }
-
-    video {
-        display: none;
-    }
-
-    #bitter_logo:hover {
-        cursor: auto;
-        filter: blur(0px);
-    }
-}
+/* //////////////////////// */
+/* 1.2 TOURDATES COMPONENT */
+/* ////////////////////// */
 
 /* GROUP 2 */
 /* slides under video_component (group 1) and band_photo_component (group 3) */
@@ -144,6 +145,200 @@ a {
 #tourdates_component a:hover {
     color: red;
 }
+
+/* ////////////////// */
+/* 2. BAND COMPONENT */
+/* //////////////// */
+
+/* GROUP 3 */
+/* slides over tourdates_component (group 2) and spotify_component (group 4) */
+
+#band_photo_component {
+    z-index: 3;
+}
+
+#band_photo_component .parallax__layer--fore {
+    background-image: url('images/band_logo.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#band_photo_component .parallax__layer--base {
+    background-image: url('images/kora_winter_band.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+/* //////////////// */
+/* 3. MERCH COMPONENT */
+/* ////////////// */
+
+#merch_photo_component {
+    z-index: 3;
+}
+
+#merch_logo_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#merch_logo {
+    transition: all 0.5s ease-out;
+}
+
+#merch_logo:hover {
+    filter: blur(5px);
+}
+
+#merch_photo_component .parallax__layer--base {
+    background-image: url('images/merch.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* ////////////////// */
+/* 4. MUSIC COMPONENT */
+/* //////////////// */
+
+/* GROUP 4 */
+/* slides over group social_media_component (group 5) */
+
+#music_component {
+    z-index: 2;
+}
+#music_component .parallax__layer--fore {
+    color: white;
+}
+#music_component .parallax__layer--base {
+    background-color: black;
+    color: white;
+}
+
+/* ALBUM ARTWORK */
+
+.image_wrapper, .album_wrapper {
+    display: flex;
+}
+
+.image_wrapper {
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.album_wrapper {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.album_artwork {
+    display: block;
+    width: 300px;
+    margin: 50px;
+    filter: grayscale(75%);
+    transition: all 1s ease-out;
+}
+
+.album_artwork:hover {
+    filter: grayscale(0%);
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+/* ALBUM DESCRIPTION */
+
+.album_description {
+    display: block;
+}
+
+
+/* /////////////////////// */
+/* 5. SOCIAL MEDIA COMPONENT */
+/* ///////////////////// */
+
+/* GROUP 5 */
+/* slides under music_component (group 4) */
+
+#social_media_component {
+    text-align: center;
+    z-index: 1;
+}
+
+#icons_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#social_media_component .parallax__layer--back {
+    background-image: url('images/album_artwork.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    filter: grayscale(90%) brightness(40%);
+}
+
+.fab {
+    font-size: 15vh;
+    margin: 40px;
+    transition: all 1s ease-out;
+}
+
+.fab:hover {
+    color: red;
+}
+
+.icons {
+    width: 100%;
+}
+
+.fas {
+    font-size: 7vh;
+}
+
+/* ////////////////////////// */
+/* 6. LEGAL NOTICE COMPONENT */
+/* //////////////////////// */
+
+#legal_notice_text {
+    cursor: pointer;
+}
+
+.legal_notice_content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5%;
+    background-color: black;
+}
+
+/* ////////////// */
+/* MEDIA QUERIES */
+/* //////////// */
+
+/* VIDEO COMPONENT: */
+
+@media (max-width: 800px) {
+    #video_component .parallax__layer--base {
+        background: url('images/screenshot_02.png') center center / cover
+            no-repeat;
+    }
+
+    video {
+        display: none;
+    }
+
+    #bitter_logo:hover {
+        cursor: auto;
+        filter: blur(0px);
+    }
+}
+
+/* TOURDATES COMPONENT: */
 
 @media screen and (max-width: 1500px) {
     .tourdates_foreground {
@@ -183,78 +378,7 @@ a {
     }
 }
 
-/* GROUP 3 */
-/* slides over tourdates_component (group 2) and spotify_component (group 4) */
-
-#band_photo_component {
-    z-index: 3;
-}
-
-#band_photo_component .parallax__layer--fore {
-    background-image: url('images/band_logo.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-#band_photo_component .parallax__layer--base {
-    background-image: url('images/kora_winter_band.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-#merch_photo_component {
-    z-index: 3;
-}
-
-#merch_photo_component .parallax__layer--fore {
-    background-image: url('images/MERCH-white.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-#merch_photo_component .parallax__layer--base {
-    background-image: url('images/merch.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-/* GROUP 4 */
-/* slides over group social_media_component (group 5) */
-
-#spotify_component {
-    z-index: 2;
-}
-#spotify_component .parallax__layer--fore {
-    color: white;
-}
-#spotify_component .parallax__layer--base {
-    background-color: black;
-    color: white;
-}
-
-.image_wrapper {
-    display: flex;
-    justify-content: center;
-}
-
-.album_wrapper {
-    text-align: center;
-}
-
-.image_wrapper img {
-    width: 300px;
-    margin: 50px;
-    filter: grayscale(75%);
-    transition: all 1s ease-out;
-}
-
-.image_wrapper img:hover {
-    filter: grayscale(0%);
-    cursor: pointer;
-    transform: scale(1.1);
-}
+/* MUSIC COMPONENT */
 
 @media screen and (max-width: 1200px) {
     .image_wrapper img {
@@ -272,36 +396,7 @@ a {
     }
 }
 
-/* GROUP 5 */
-/* slides under spotify_component (group 4) */
-
-/* TO DO: */
-/* smaller screensize: always two in one row */
-
-#social_media_component {
-    z-index: 1;
-}
-#social_media_component .parallax__layer--back {
-    background-image: url('images/album_artwork.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    filter: grayscale(90%) brightness(40%);
-}
-
-.fab {
-    font-size: 15vh;
-    margin: 40px;
-    transition: all 1s ease-out;
-}
-
-.fab:hover {
-    color: red;
-}
-
-.icons {
-    width: 100%;
-}
+/* SOCIAL MEDIA COMPONENT */
 
 @media screen and (max-width: 832px) {
     .icons {
@@ -313,7 +408,9 @@ a {
     }
 }
 
-/* MISC */
+/* ///////////// */
+/* MISCALLENOUS */
+/* /////////// */
 
 .center_content {
     text-align: center;
