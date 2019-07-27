@@ -8,9 +8,9 @@ export default class SocialMedia extends React.Component {
 
                     <div className="parallax__layer parallax__layer--back" />
 
-                    <div className="parallax__layer parallax__layer--base">
+                    <div id="icons_container" className="parallax__layer parallax__layer--base">
 
-                        <div className="center_content icons">
+                        <div className="icons">
                             <a href="https://www.facebook.com/korawinterband" target="_blank" rel="noopener noreferrer">
                                 <i className="fab fa-facebook-square" />
                             </a>
@@ -25,6 +25,9 @@ export default class SocialMedia extends React.Component {
                             </a>
                         </div>
 
+                        <h1 onClick={this.props.handleChange} id="legal_notice_text">Legal Notice</h1>
+                        {this.props.show ? <i class="fas fa-chevron-down"></i> : null}
+
                     </div>
 
                 </div>
@@ -36,3 +39,4 @@ export default class SocialMedia extends React.Component {
 // TO DO:
 
 // media queries need to be fixed
+// .center_content causes problem in Chrome
