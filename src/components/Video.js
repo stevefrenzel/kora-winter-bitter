@@ -43,11 +43,11 @@ export default class Video extends React.Component {
             <React.Fragment>
                 {/* GROUP 1*/}
                 <div id="video_component" className="parallax__group">
-                    <div className="parallax__layer parallax__layer--base">
-                        {!this.state.stopVideoLoad && (<video src={video} ref={this.video_loop} loop />)}
-                    </div>
-                    <div className="parallax__layer parallax__layer--fore">
+                    <div className="video_headline parallax__layer parallax__layer--fore">
                         <img onClick={this.startVideo} src={logo} alt="Bitter logo" id="bitter_logo" className="center_content" />
+                    </div>
+                    <div className="video_background parallax__layer parallax__layer--base">
+                        {!this.state.stopVideoLoad && (<video src={video} ref={this.video_loop} loop />)}
                     </div>
                 </div>
             </React.Fragment>

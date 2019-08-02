@@ -22,17 +22,19 @@ export default class App extends React.Component {
 
     render() {
         return (
-                <div className="parallax">
-                    <Video />
-                    <Band />
-                    <Merch />
-                    <Music />
-                    <SocialMedia 
-                    handleChange={this.handleChange}
-                    componentVisible={this.state.show}
-                    />
-                    {this.state.show ? <LegalNotice /> : null}
-                </div>
+                <React.Fragment>
+                    <div className="parallax">
+                        <Video />
+                        <Band />
+                        <Merch />
+                        <Music />
+                        <SocialMedia
+                        handleChange={this.handleChange}
+                        componentVisible={this.state.show}
+                        />
+                    </div>
+                    {this.state.show ? <LegalNotice handleChange={this.handleChange} /> : null}
+                </React.Fragment>
         );
     }
 }

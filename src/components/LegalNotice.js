@@ -5,10 +5,9 @@ export default class LegalNotice extends React.Component {
         return (
             <React.Fragment>
                 {/* GROUP 2*/}
-                <div id="tourdates_component" className="parallax__group">
+                <div onClick={this.props.handleChange} id="legal_notice_component">
 
-                    <div className="parallax__layer_tourdates parallax__layer--fore legal_notice_content">
-
+                    {/*<div className="parallax__layer_tourdates parallax__layer--fore legal_notice_content">*/}
                         <section id="legalNotice">
                             <h2>Information in accordance with section 5 TMG</h2>
                             <p>Hakan Halaç</p>
@@ -62,9 +61,9 @@ export default class LegalNotice extends React.Component {
                             </p>
                         </section>
 
-                    </div>
+                    {/*</div>*/}
 
-                    <div className="parallax__layer parallax__layer--base" />
+                    {/*<div className="parallax__layer parallax__layer--base" />*/}
                     
                 </div>
             </React.Fragment>

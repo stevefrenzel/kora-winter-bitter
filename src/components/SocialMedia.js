@@ -25,7 +25,7 @@ export default class SocialMedia extends React.Component {
                             </a>
                         </div>
 
-                        <h1 onClick={this.props.handleChange} id="legal_notice_text">Legal Notice</h1>
+                        <h2 onClick={this.props.handleChange} id="legal_notice_text">Legal Notice</h2>
                         {this.props.show ? <i class="fas fa-chevron-down"></i> : null}
 
                     </div>

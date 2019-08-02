@@ -38,7 +38,7 @@ section {
     overflow-y: auto;
     -webkit-perspective: 300px;
     perspective: 300px;
-    background-color: lightgreen;
+    /*background-color: lightgreen;*/
 }
 
 .parallax__group {
@@ -85,7 +85,7 @@ section {
     -webkit-transform: translateZ(-300px) scale(2);
     transform: translateZ(-300px) scale(2);
     z-index: 3;
-    background-color: goldenrod;
+    /*background-color: goldenrod;*/
 }
 
 /* //////////////// */
@@ -105,14 +105,14 @@ section {
     object-fit: cover;
 }
 
-#bitter_logo {
+#video_component #bitter_logo {
     width: 90%;
-    transition: all 0.5s ease-out;
+    transition: filter 0.5s ease-out;
 }
 
-#bitter_logo:hover {
-    cursor: pointer;
+#video_component .video_headline:hover #bitter_logo {
     filter: blur(5px);
+    cursor: pointer;
 }
 
 /* //////////////////////// */
@@ -181,9 +181,11 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
 }
 
 #merch_logo {
+    width: 90%;
     transition: all 0.5s ease-out;
 }
 
@@ -233,7 +235,7 @@ section {
     align-items: center;
 }
 
-.album_artwork {
+.album_wrapper .album_artwork {
     display: block;
     width: 300px;
     margin: 50px;
@@ -241,16 +243,21 @@ section {
     transition: all 1s ease-out;
 }
 
-.album_artwork:hover {
+.album_wrapper a:hover .album_artwork {
     filter: grayscale(0%);
-    cursor: pointer;
     transform: scale(1.1);
 }
 
 /* ALBUM DESCRIPTION */
 
-.album_description {
+.album_wrapper .album_description {
+    margin: auto;
     display: block;
+    height: 111px;
+}
+.album_wrapper .album_description.blueht_desc {
+    height: 124px;
+    margin-top: -13px;
 }
 
 
@@ -294,7 +301,9 @@ section {
 .icons {
     width: 100%;
 }
-
+.icons i {
+    width: 75px;
+}
 .fas {
     font-size: 7vh;
 }
@@ -303,8 +312,22 @@ section {
 /* 6. LEGAL NOTICE COMPONENT */
 /* //////////////////////// */
 
+#legal_notice_component {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: auto;
+    overflow: scroll;
+    background: black;
+    text-align: center;
+    padding: 5%;
+}
+
 #legal_notice_text {
     cursor: pointer;
+    font-size: 14px;
 }
 
 .legal_notice_content {
@@ -381,18 +404,35 @@ section {
 /* MUSIC COMPONENT */
 
 @media screen and (max-width: 1200px) {
-    .image_wrapper img {
+    .album_wrapper {
+        min-width: 300px;
+    }
+    .album_wrapper .album_artwork {
         width: 250px;
+        margin: 25px auto
+    }
+    .album_wrapper .album_description {
+        height: 50px;
+    }
+    .album_wrapper .album_description.blueht_desc {
+        height: calc(50px + 6px);
+        margin-top: -6px;
     }
 }
 
 @media screen and (max-width: 1000px) {
-    .image_wrapper img {
-        width: 175px;
+    #music_component {
+        height: 150vh;
     }
-
     .image_wrapper {
         flex-wrap: wrap;
+    }
+    .album_wrapper {
+        width: 100%;
+    }
+    .album_wrapper .album_artwork {
+        width: 175px;
+        margin: 25px auto
     }
 }
 
@@ -405,6 +445,10 @@ section {
 
     .fab {
         font-size: 10vh;
+        margin: 40px;
+    }
+    .icons i {
+        width: 56px;
     }
 }
 
