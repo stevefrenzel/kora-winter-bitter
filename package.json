@@ -24,7 +24,8 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "webpack-dev": "encore dev",
-    "webpack-watch": "encore dev --watch"
+    "webpack-watch": "encore dev --watch",
+    "webpack-build": "encore production --progress"
   },
   "eslintConfig": {
     "extends": "react-app"
