@@ -1,0 +1,9 @@
+@import "~typeface-ubuntu/index.css";
+
+@font-face {
+  font-family: "FactualOblique";
+  src: url("../fonts/Jeff Levine - FactualObliqueJNL.otf") format("opentype");
+}
+.bitter-font {
+  font-family: 'FactualOblique', 'Ubuntu', sans-serif;
+}

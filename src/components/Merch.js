@@ -1,5 +1,5 @@
 import React from 'react';
-import merchLogo from '../images/MERCH-red.png';
+import merchLogo from '../build/images/MERCH-red.png';
 
 export default class Merch extends React.Component {
     render() {

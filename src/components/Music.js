@@ -1,10 +1,10 @@
 import React from 'react';
-import bluehtArtwork from '../images/01_blueht.jpg';
-import bluehtDescription from '../images/01_blueht_description.png';
-import welkArtwork from '../images/02_welk.jpg';
-import welkDescription from '../images/02_welk_description.png';
-import bitterArtwork from '../images/03_bitter.png';
-import bitterDescription from '../images/03_bitter_description.png';
+import bluehtArtwork from '../build/images/01_blueht.jpg';
+import bluehtDescription from '../build/images/01_blueht_description.png';
+import welkArtwork from '../build/images/02_welk.jpg';
+import welkDescription from '../build/images/02_welk_description.png';
+import bitterArtwork from '../build/images/03_bitter.png';
+import bitterDescription from '../build/images/03_bitter_description.png';
 
 export default class Music extends React.Component {
     render() {

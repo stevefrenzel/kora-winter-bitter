@@ -1,6 +1,6 @@
 import React from 'react';
-import logo from '../images/logo.png';
-import video from '../video/background_video_hi_res.mp4';
+import logo from '../build/images/logo.png';
+import video from '../build/video/background_video_lo_res.mov';
 
 export default class Video extends React.Component {
     constructor(props) {
@@ -22,7 +22,7 @@ export default class Video extends React.Component {
                 this.video_loop.current.pause();
             }
         } catch (e) {}
-    }
+    };
 
     dontLoadVideo = () => {
         try {
@@ -36,7 +36,7 @@ export default class Video extends React.Component {
         } else {
             this.setState({ stopVideoLoad: false });
         }
-    }
+    };
 
     render() {
         return (
@@ -55,7 +55,7 @@ export default class Video extends React.Component {
     }
 }
 
-// TO DO:
+// TODO:
 
 // Look for an easier way prevent video from loading on mobile devices
 // Get video in lower resolution

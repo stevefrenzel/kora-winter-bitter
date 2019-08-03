@@ -1,0 +1,122 @@
+/* ////////////// */
+/* MEDIA QUERIES */
+/* //////////// */
+
+/* VIDEO COMPONENT: */
+
+@media (max-width: 800px) {
+  #video_component .parallax__layer--base {
+    background: url('../static/images/screenshot_02.png') center center / cover no-repeat;
+  }
+
+  video {
+    display: none;
+  }
+
+  #bitter_logo:hover {
+    cursor: auto;
+    filter: blur(0px);
+  }
+}
+
+/* TOURDATES COMPONENT: */
+
+//@media screen and (max-width: 1500px) {
+//  .tourdates_foreground {
+//    font-size: 28px;
+//  }
+//}
+//
+//@media screen and (max-width: 1300px) {
+//  .tourdates_foreground {
+//    font-size: 24px;
+//  }
+//}
+//
+//@media screen and (max-width: 1000px) {
+//  .tourdates_foreground {
+//    font-size: 20px;
+//  }
+//}
+//
+//@media screen and (max-width: 900px) {
+//  .tourdates_foreground {
+//    font-size: 18px;
+//  }
+//
+//  #tourdates_component .parallax__layer--fore {
+//    margin: -100px 40px 0px 40px;
+//  }
+//}
+//
+//@media screen and (max-width: 414px) {
+//  .tourdates_foreground {
+//    font-size: 12px;
+//  }
+//
+//  #tourdates_component .parallax__layer--fore {
+//    margin: -80px 30px 0px 30px;
+//  }
+//}
+
+/* MUSIC COMPONENT */
+
+@media screen and (max-width: 1200px) {
+  #music_component {
+    .album_wrapper {
+      min-width: 300px;
+    }
+
+    .album_wrapper .album_artwork {
+      width: 250px;
+      margin: 25px auto;
+    }
+
+    .album_wrapper .album_description {
+      height: 50px;
+    }
+
+    .album_wrapper .album_description.blueht_desc {
+      height: calc(50px + 6px);
+      margin-top: -6px;
+    }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  #music_component {
+    height: 150vh;
+    .album_wrapper {
+      min-width: 200px;
+      &:first-child {
+        width: 100%;
+      }
+    }
+
+    .image_wrapper {
+      flex-wrap: wrap;
+    }
+
+    .album_wrapper .album_artwork {
+      width: 175px;
+      margin: 25px auto
+    }
+  }
+}
+
+
+/* SOCIAL MEDIA COMPONENT */
+
+@media screen and (max-width: 832px) {
+  .icons {
+    width: 400px;
+  }
+
+  .fab {
+    font-size: 10vh;
+    margin: 40px;
+  }
+  .icons i {
+    width: 56px;
+  }
+}

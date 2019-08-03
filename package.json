@@ -3,16 +3,28 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.9.0",
+    "@symfony/webpack-encore": "^0.27.0",
+    "autoprefixer": "^9.6.1",
+    "json-loader": "^0.5.7",
     "moment": "^2.24.0",
+    "node-sass": "^4.12.0",
+    "postcss-loader": "^3.0.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "react-scripts": "3.0.1"
+    "react-scripts": "3.0.1",
+    "sass-loader": "^7.1.0",
+    "typeface-ubuntu": "0.0.65",
+    "typescript": "^3.5.3",
+    "webpack-notifier": "^1.8.0"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "webpack-dev": "encore dev",
+    "webpack-watch": "encore dev --watch"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -29,9 +41,5 @@
       "last 1 safari version"
     ]
   },
-  "devDependencies": {
-    "@fortawesome/fontawesome-free": "^5.9.0",
-    "json-loader": "^0.5.7",
-    "typeface-roboto-mono": "0.0.54"
-  }
+  "devDependencies": {}
 }
