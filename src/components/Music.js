@@ -36,13 +36,9 @@ export default class Music extends React.Component {
                                     <img className="album_description blueht_desc" src={bluehtDescription} alt="Blueht description" />
                                 </a>
                             </div>
-
                         </div>
-
                     </div>
-
                     <div className="parallax__layer parallax__layer--base" />
-                    
                 </div>
             </React.Fragment>
         );

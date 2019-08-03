@@ -1,20 +1,16 @@
 /* //////////////// */
 /* GLOBAL SETTINGS */
 /* ////////////// */
-
-html {
-  scroll-behavior: smooth;
+html, body {
+  overflow: hidden;
 }
+
 body {
   margin: 0;
   background-color: black;
   color: white;
   font-family: 'Ubuntu', sans-serif;
 }
-//* {
-//    margin: 0;
-//    padding: 0;
-//}
 
 a {
   text-decoration: none;
@@ -33,9 +29,11 @@ section {
   height: 500px; /* fallback for older browsers */
   height: 100vh;
   overflow-x: hidden;
-  overflow-y: auto;
+  overflow-y: scroll;
+  //-webkit-overflow-scrolling: touch;
   -webkit-perspective: 300px;
   perspective: 300px;
+
   .parallax__group {
     position: relative;
     height: 500px; /* fallback for older browsers */
@@ -44,12 +42,14 @@ section {
     transform-style: preserve-3d;
   }
 
+  //
   .parallax__layer {
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
+
     &.parallax__layer--fore {
       -webkit-transform: translateZ(90px) scale(0.7);
       transform: translateZ(90px) scale(0.7);
@@ -69,11 +69,7 @@ section {
       z-index: 3;
     }
   }
-
-
 }
-
-
 
 /* ///////////// */
 /* MISCALLENOUS */
