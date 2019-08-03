@@ -7,16 +7,19 @@
 
 #video_component {
   z-index: 5;
+
   video {
     width: 100%;
     height: 100%;
     object-fit: cover;
   }
+
   #bitter_logo {
     max-width: 90%;
     max-height: 100%;
     transition: filter .5s ease-out;
     margin: auto;
+
     &:hover {
       filter: blur(5px);
       cursor: pointer;
@@ -32,19 +35,29 @@
 /* slides under video_component (group 1) and band_photo_component (group 3) */
 
 #tourdates_component {
-  font-size: 32px;
-  margin: 50px;
   z-index: 4;
-  p {
-    margin: 0;
-  }
-  a {
-    color: grey;
-    transition: color .5s ease-out, filter .5s ease-out;
 
-    &:hover {
-      filter: blur(1px);
-      color: $bitter-red;
+  .tourdates_content {
+    font-size: 7vmin;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    h1 {
+      margin: 4vmin;
+    }
+
+    p {
+      margin: 2vmin;
+    }
+
+    a {
+      color: grey;
+      transition: color .5s ease-out;
+
+      &:hover {
+        color: $bitter-red;
+      }
     }
   }
 }
@@ -116,54 +129,47 @@
 #music_component {
   z-index: 2;
 
-  .parallax__layer--fore {
-    color: white;
-  }
-
-  .parallax__layer--base {
-    background-color: black;
-    color: white;
-  }
-
-  /* ALBUM ARTWORK */
-
-  .image_wrapper, .album_wrapper {
+  .music_content {
     display: flex;
-  }
-
-  .image_wrapper {
-    flex-direction: row;
-    justify-content: space-evenly;
-  }
-
-  .album_wrapper {
-    flex-direction: column;
     justify-content: center;
-    align-items: center;
+    flex-direction: column;
 
-    .album_artwork {
-      display: block;
-      width: 300px;
-      margin: 50px;
-      filter: grayscale(75%);
-      transition: filter .5s ease-out, transform .5s ease-out;
-    }
+    .image_wrapper {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
 
-    a:hover {
-      .album_artwork {
-        filter: grayscale(0%);
-        transform: scale(1.1);
-      }
-    }
+      .album_wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
 
-    .album_description {
-      margin: auto;
-      display: block;
-      height: 111px;
+        .album_artwork {
+          display: block;
+          width: 300px;
+          margin-bottom: 50px;
+          filter: grayscale(75%);
+          transition: filter .5s ease-out, transform .5s ease-out;
+        }
 
-      &.blueht_desc {
-        height: 124px;
-        margin-top: -13px;
+        a:hover {
+          .album_artwork {
+            filter: grayscale(0%);
+            transform: scale(1.1);
+          }
+        }
+
+        .album_description {
+          margin: auto;
+          display: block;
+          height: 111px;
+
+          &.blueht_desc {
+            height: 124px;
+            margin-top: -13px;
+          }
+        }
       }
     }
   }
@@ -180,48 +186,44 @@
   text-align: center;
   z-index: 1;
 
+  #icons_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    .icons {
+      width: 100%;
+      display: flex;
+      justify-content: space-evenly;
+
+      .fab {
+        width: 25vw;
+        font-size: 8vw;
+        transition: color .5s ease-out;
+
+        &:hover {
+          color: $bitter-red;
+        }
+      }
+    }
+
+    #legal_notice_link {
+      cursor: pointer;
+      font-size: 26px;
+      transition: filter .5s ease-out;
+
+      &:hover {
+        filter: blur(0.5px);
+      }
+    }
+  }
+
+
   .parallax__layer--base {
     background-image: url('../images/album_artwork.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-  }
-
-  #icons_container {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-  }
-
-  .fab {
-    font-size: 15vh;
-    margin: 40px;
-    transition: color .5s ease-out, filter .5s ease-out;
-    &:hover {
-      color: $bitter-red;
-      filter: blur(1px);
-    }
-  }
-
-  .icons {
-    width: 100%;
-    i {
-      width: 75px;
-    }
-  }
-
-  .fas {
-    font-size: 7vh;
-  }
-
-  #legal_notice_link {
-    cursor: pointer;
-    font-size: 26px;
-    transition: filter .5s ease-out;
-    &:hover {
-      filter: blur(1px);
-    }
   }
 }
 

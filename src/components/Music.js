@@ -13,7 +13,7 @@ export default class Music extends React.Component {
                 {/* GROUP 4 */}
                 <div id="music_component" className="parallax__group">
 
-                    <div className="parallax__layer parallax__layer--fore">
+                    <div className="music_content parallax__layer parallax__layer--fore">
 
                         <div className="image_wrapper">
                             <div className="album_wrapper">
