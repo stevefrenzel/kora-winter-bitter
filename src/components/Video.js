@@ -17,6 +17,8 @@ export default class Video extends React.Component {
     startVideo = () => {
         try {
             if (this.video_loop.current.paused) {
+                let bg_vid = document.getElementById("bg_video");
+                bg_vid.classList.remove("video_hidden");
                 this.video_loop.current.play();
             } else {
                 this.video_loop.current.pause();
@@ -47,7 +49,9 @@ export default class Video extends React.Component {
                         <img onClick={this.startVideo} src={logo} alt="Bitter logo" id="bitter_logo" className="center_content" />
                     </div>
                     <div className="video_background parallax__layer parallax__layer--base">
-                        {!this.state.stopVideoLoad && (<video src={video} ref={this.video_loop} loop />)}
+                        <div id="bg_video" className="video_hidden">
+                            {!this.state.stopVideoLoad && (<video src={video} ref={this.video_loop} loop />)}
+                        </div>
                     </div>
                 </div>
             </React.Fragment>

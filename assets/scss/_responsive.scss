@@ -5,18 +5,18 @@
 /* VIDEO COMPONENT: */
 
 @media (max-width: 800px) {
-  #video_component .parallax__layer--base {
-    background: url('../images/screenshot_02_low.jpg') center center / cover no-repeat;
-  }
+  //#video_component .parallax__layer--base {
+  //  background: url('../images/screenshot_02_low.jpg') center center / cover no-repeat;
+  //}
 
-  video {
-    display: none;
-  }
-
-  #bitter_logo:hover {
-    cursor: auto;
-    filter: blur(0px);
-  }
+  //video {
+  //  display: none;
+  //}
+  //
+  //#bitter_logo:hover {
+  //  cursor: auto;
+  //  filter: blur(0px);
+  //}
 }
 
 /* MUSIC COMPONENT */
@@ -73,9 +73,9 @@
       .icons {
         flex-wrap: wrap;
         .fab {
-          width: 150px;
+          width: 170px;
           height: 100px;
-          font-size: 10vw;
+          font-size: 70px;
         }
       }
     }
