@@ -166,7 +166,9 @@
           filter: grayscale(75%);
           transition: filter .5s ease-out, transform .5s ease-out;
         }
-
+        p {
+          margin: 0;
+        }
         a:hover {
           .album_artwork {
             filter: grayscale(0%);

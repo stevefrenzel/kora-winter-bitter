@@ -3,7 +3,7 @@ import bluehtArtwork from '../build/images/01_blueht.jpg';
 import bluehtDescription from '../build/images/01_blueht_description.png';
 import welkArtwork from '../build/images/02_welk.jpg';
 import welkDescription from '../build/images/02_welk_description.png';
-import bitterArtwork from '../build/images/03_bitter.png';
+import bitterArtwork from '../build/images/03_bitter_release_low.png';
 import bitterDescription from '../build/images/03_bitter_description.png';
 
 export default class Music extends React.Component {
@@ -17,10 +17,10 @@ export default class Music extends React.Component {
 
                         <div className="image_wrapper">
                             <div className="album_wrapper">
-                                <a href="javascript:;">
+                                <p>
                                     <img className="album_artwork" src={bitterArtwork} alt="Kora Winter - Bitter" />
                                     <img className="album_description" src={bitterDescription} alt="Bitter description" />
-                                </a>
+                                </p>
                             </div>
 
                             <div className="album_wrapper">
