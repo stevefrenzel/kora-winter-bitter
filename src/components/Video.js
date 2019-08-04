@@ -36,7 +36,11 @@ export default class Video extends React.Component {
         if (getDisplay === 'none') {
             this.setState({ stopVideoLoad: true });
         } else {
-            this.setState({ stopVideoLoad: false });
+            if (window.outerWidth < 800) {
+                this.setState({ stopVideoLoad: true });
+            } else {
+                this.setState({ stopVideoLoad: false });
+            }
         }
     };
 

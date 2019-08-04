@@ -17,7 +17,7 @@ export default class Music extends React.Component {
 
                         <div className="image_wrapper">
                             <div className="album_wrapper">
-                                <a href="javascript:;" target="_blank" rel="noopener noreferrer">
+                                <a href="javascript:;">
                                     <img className="album_artwork" src={bitterArtwork} alt="Kora Winter - Bitter" />
                                     <img className="album_description" src={bitterDescription} alt="Bitter description" />
                                 </a>

@@ -25,14 +25,18 @@
   .video_background {
     background: url('../images/video_thumbnail_low.png') center center / cover no-repeat;
     //filter: blur(1px);
-  }
-  .video_hidden {
-    display: none;
-  }
-  video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    #bg_video {
+      width: 100%;
+      height: 100%;
+      &.video_hidden {
+        display: none;
+      }
+      video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
   }
 }
 
