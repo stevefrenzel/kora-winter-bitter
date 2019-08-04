@@ -75,14 +75,14 @@
 }
 
 #band_photo_component .parallax__layer--fore {
-  background-image: url('../images/band_logo.png');
+  background-image: url('../images/band_logo_low.png');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
 }
 
 #band_photo_component .parallax__layer--base {
-  background-image: url('../images/kora_winter_band.jpg');
+  background-image: url('../images/kora_winter_band_low.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -96,7 +96,7 @@
   z-index: 3;
 
   .parallax__layer--base {
-    background-image: url('../images/merch.jpg');
+    background-image: url('../images/merch_low.gif');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -221,7 +221,7 @@
 
 
   .parallax__layer--base {
-    background-image: url('../images/album_artwork.jpg');
+    background-image: url('../images/album_artwork_low.gif');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;

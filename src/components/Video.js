@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from '../build/images/logo.png';
+import logo from '../build/images/logo_low.png' ;
 import video from '../build/video/background_video_lo_res.mov';
 
 export default class Video extends React.Component {
