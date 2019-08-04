@@ -47,16 +47,17 @@
       margin: 4vmin;
     }
 
-    p {
+    .tourdate_entry {
       margin: 2vmin;
-    }
-
-    a {
       color: grey;
-      transition: color .5s ease-out;
 
-      &:hover {
-        color: $bitter-red;
+      a {
+        color: grey;
+        transition: color .5s ease-out;
+
+        &:hover {
+          color: $bitter-red;
+        }
       }
     }
   }
@@ -194,10 +195,10 @@
     .icons {
       width: 100%;
       display: flex;
-      justify-content: space-evenly;
+      justify-content: center;
 
       .fab {
-        width: 25vw;
+        width: 17vw;
         font-size: 8vw;
         transition: color .5s ease-out;
 

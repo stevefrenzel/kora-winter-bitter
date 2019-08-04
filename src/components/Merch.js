@@ -8,7 +8,7 @@ export default class Merch extends React.Component {
                 {/* GROUP 3 */}
                 <div id="merch_photo_component" className="parallax__group">
                     <div id="merch_logo_container" className="parallax__layer parallax__layer--fore">
-                        <a href="https://korawinter.bandcamp.com/" rel="noopener noreferrer" target="_blank">
+                        <a href="https://korawinter.bandcamp.com/merch" rel="noopener noreferrer" target="_blank">
                             <img src={merchLogo} alt="Red merchandise logo" id="merch_logo" />
                         </a>
                     </div>

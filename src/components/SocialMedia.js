@@ -13,6 +13,9 @@ export default class SocialMedia extends React.Component {
                             <a href="https://www.instagram.com/korawinter/" target="_blank" rel="noopener noreferrer">
                                 <i className="fab fa-instagram" />
                             </a>
+                            <a href="https://www.youtube.com/channel/UCBP_NZMedZzJpvR9LD2aaiw/videos" target="_blank" rel="noopener noreferrer">
+                                <i className="fab fa-youtube-square" />
+                            </a>
                             <a href="https://twitter.com/korawinter" target="_blank" rel="noopener noreferrer">
                                 <i className="fab fa-twitter-square" />
                             </a>

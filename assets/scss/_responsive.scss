@@ -71,7 +71,10 @@
   #social_media_component {
     #icons_container {
       .icons {
+        flex-wrap: wrap;
         .fab {
+          width: 150px;
+          height: 100px;
           font-size: 10vw;
         }
       }
