@@ -23,7 +23,10 @@ export default class SocialMedia extends React.Component {
                                 <i className="fab fa-bandcamp" />
                             </a>
                         </div>
-                        <h2 onClick={this.props.handleChange} id="legal_notice_link" className="bitter-font">Legal Notice</h2>
+                        <div>
+                            <h2 className="bitter-font">booking[at]korawinter.de</h2>
+                            <h2 onClick={this.props.handleChange} id="legal_notice_link" className="bitter-font">Legal Notice</h2>
+                        </div>
                     </div>
                     <div className="parallax__layer parallax__layer--base" />
                 </div>
