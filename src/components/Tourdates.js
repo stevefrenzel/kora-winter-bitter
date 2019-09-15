@@ -20,18 +20,19 @@ export default class Tourdates extends React.Component {
                     <div className="tourdates_content parallax__layer parallax__layer--fore">
                        <h1>Tour Dates</h1>
                         <p className="tourdate_entry">
-                            <a href="https://www.facebook.com/events/2472678699635945/" target="_blank" rel="noopener noreferrer">
                             17.Aug.2019 - Eisenach - Everland Festival
-                            </a>
                         </p>
                         <p className="tourdate_entry">
-                            <a href="https://www.facebook.com/events/2198888200423655/" target="_blank" rel="noopener noreferrer">
-                                20.Aug.2019 - Berlin - Cassiopeia (Evergreen Terrace Support)
-                            </a>
+                            20.Aug.2019 - Berlin - Cassiopeia (Evergreen Terrace Support)
                         </p>
                         <p className="tourdate_entry">
                             <a href="https://www.facebook.com/events/349633399195006/" target="_blank" rel="noopener noreferrer">
                                 21.Sep.2019 - Berlin - Heartcore Festival
+                            </a>
+                        </p>
+                        <p className="tourdate_entry">
+                            <a href="https://www.facebook.com/events/387345895264697/" target="_blank" rel="noopener noreferrer">
+                                18. Oktober 2019 - Karlsruhe - P8 (w/ Knife Eyes)
                             </a>
                         </p>
                     </div>
