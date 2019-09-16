@@ -19,12 +19,12 @@ export default class Tourdates extends React.Component {
                 <div id="tourdates_component" className="parallax__group bitter-font">
                     <div className="tourdates_content parallax__layer parallax__layer--fore">
                        <h1>Tour Dates</h1>
-                        <p className="tourdate_entry">
-                            17.Aug.2019 - Eisenach - Everland Festival
-                        </p>
-                        <p className="tourdate_entry">
-                            20.Aug.2019 - Berlin - Cassiopeia (Evergreen Terrace Support)
-                        </p>
+                        {/*<p className="tourdate_entry">*/}
+                        {/*    17.Aug.2019 - Eisenach - Everland Festival*/}
+                        {/*</p>*/}
+                        {/*<p className="tourdate_entry">*/}
+                        {/*    20.Aug.2019 - Berlin - Cassiopeia (Evergreen Terrace Support)*/}
+                        {/*</p>*/}
                         <p className="tourdate_entry">
                             <a href="https://www.facebook.com/events/349633399195006/" target="_blank" rel="noopener noreferrer">
                                 21.Sep.2019 - Berlin - Heartcore Festival
@@ -32,8 +32,11 @@ export default class Tourdates extends React.Component {
                         </p>
                         <p className="tourdate_entry">
                             <a href="https://www.facebook.com/events/387345895264697/" target="_blank" rel="noopener noreferrer">
-                                18. Oktober 2019 - Karlsruhe - P8 (w/ Knife Eyes)
+                                18.Okt.2019 - Karlsruhe - P8 (w/ Knife Eyes)
                             </a>
+                        </p>
+                        <p className="tourdate_entry">
+                            02.Nov.2019 - Leipzig - TBA (w/ Lessoner)
                         </p>
                     </div>
                     <div className="parallax__layer parallax__layer--base" />
