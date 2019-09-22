@@ -1,0 +1,13 @@
+version: '2'
+
+services:
+    php:
+        build: ./docker
+        volumes:
+            - .:/opt/project
+            - ./docker/90-php.ini:/usr/local/etc/php/conf.d/90-php.ini
+        environment:
+            XDEBUG_CONFIG: "remote_host=192.168.178.23"
+        ports:
+            - 3000:3000
+        restart: always

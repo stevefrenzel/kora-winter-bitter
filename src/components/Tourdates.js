@@ -25,9 +25,14 @@ export default class Tourdates extends React.Component {
                         {/*<p className="tourdate_entry">*/}
                         {/*    20.Aug.2019 - Berlin - Cassiopeia (Evergreen Terrace Support)*/}
                         {/*</p>*/}
+                        {/*<p className="tourdate_entry">*/}
+                        {/*    <a href="https://www.facebook.com/events/349633399195006/" target="_blank" rel="noopener noreferrer">*/}
+                        {/*        21.Sep.2019 - Berlin - Heartcore Festival*/}
+                        {/*    </a>*/}
+                        {/*</p>*/}
                         <p className="tourdate_entry">
-                            <a href="https://www.facebook.com/events/349633399195006/" target="_blank" rel="noopener noreferrer">
-                                21.Sep.2019 - Berlin - Heartcore Festival
+                            <a href="https://www.facebook.com/events/367179160867474/" target="_blank" rel="noopener noreferrer">
+                                05.Okt.2019 - Plochingen - JUZEPlochingen
                             </a>
                         </p>
                         <p className="tourdate_entry">
