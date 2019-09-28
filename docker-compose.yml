@@ -10,4 +10,3 @@ services:
             XDEBUG_CONFIG: "remote_host=192.168.178.23"
         ports:
             - 3000:3000
-        restart: always
