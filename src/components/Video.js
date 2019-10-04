@@ -23,7 +23,8 @@ export default class Video extends React.Component {
             } else {
                 this.video_loop.current.pause();
             }
-        } catch (e) {}
+        } catch (e) {
+        }
     };
 
     dontLoadVideo = () => {
@@ -31,15 +32,16 @@ export default class Video extends React.Component {
             var getDisplay = window
                 .getComputedStyle(this.video_loop.current)
                 .getPropertyValue('display');
-        } catch (e) {}
+        } catch (e) {
+        }
 
         if (getDisplay === 'none') {
-            this.setState({ stopVideoLoad: true });
+            this.setState({stopVideoLoad: true});
         } else {
             if (window.outerWidth < 800) {
-                this.setState({ stopVideoLoad: true });
+                this.setState({stopVideoLoad: true});
             } else {
-                this.setState({ stopVideoLoad: false });
+                this.setState({stopVideoLoad: false});
             }
         }
     };
@@ -50,11 +52,22 @@ export default class Video extends React.Component {
                 {/* GROUP 1*/}
                 <div id="video_component" className="parallax__group">
                     <div className="video_headline parallax__layer parallax__layer--fore">
-                        <img onClick={this.startVideo} src={logo} alt="Bitter logo" id="bitter_logo" className="center_content" />
+                        {this.state.stopVideoLoad && (
+                            <a href="https://www.youtube.com/watch?v=zkfVAPvRmzM">
+                                <img src={logo} alt="Bitter logo" id="bitter_logo"
+                                     className="center_content"/>
+                            </a>
+                        )}
+                        {!this.state.stopVideoLoad && (
+                            <img onClick={this.startVideo} src={logo} alt="Bitter logo" id="bitter_logo"
+                                 className="center_content"/>
+                        )}
                     </div>
                     <div className="video_background parallax__layer parallax__layer--base">
                         <div id="bg_video" className="video_hidden">
-                            {!this.state.stopVideoLoad && (<video src={video} ref={this.video_loop} loop />)}
+                            {!this.state.stopVideoLoad && (
+                                <video src={video} ref={this.video_loop} loop/>
+                            )}
                         </div>
                     </div>
                 </div>
